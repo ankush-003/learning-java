@@ -18,3 +18,9 @@ int[] arr = new int[5];
 ## Passing arrays to methods
 - arrays are objects, so when you pass an array to a method, you are passing the reference to the array
 - the method can change the elements of the array
+
+## Array List
+- array list is a class that implements the List interface
+- array list is a dynamic array
+- array list uses wrapper classes for primitive types
+- to access elements in an array list, use the get method

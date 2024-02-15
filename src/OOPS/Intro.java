@@ -1,5 +1,7 @@
 package OOPS;
 
+import java.util.Arrays;
+
 public class Intro {
     public static void main(String[] args) {
         // store 5 roll nos
@@ -8,13 +10,48 @@ public class Intro {
         String[] names = new String[5];
 
         // data type, name, value
-//        Student ankush = new Student();
-//        System.out.println(ankush.rollNumber);
+        Student ankush; // reference declaration
+        ankush = new Student(); // object creation in heap memory
+        System.out.println(ankush.rollNumber);
+
+        Student[] students = new Student[5];
+        System.out.println(Arrays.toString(students));
+
+        // object creation using constructor
+        Student rahul = new Student(2, "Rahul", 80.0f);
+        System.out.println(rahul.rollNumber);
+        System.out.println(rahul.name);
+        System.out.println(rahul.marks);
+
+        // object creation using copy constructor
+        Student rahulCopy = new Student(rahul);
+        System.out.println(rahulCopy.rollNumber);
+        System.out.println(rahulCopy.name);
+    }
+}
+
+class Student {
+    int rollNumber;
+    String name;
+    float marks;
+    // constructor
+    Student() {
+//        this.rollNumber = 1;
+//        this.name = "Ankush";
+//        this.marks = 90.0f;
+        // calling parameterized constructor
+        this(1, "Ankush", 90.0f);
+    }
+    Student(int rollNumber, String name, float marks) {
+        this.rollNumber = rollNumber;
+        this.name = name;
+        this.marks = marks;
+    }
+    Student(Student student) {
+        this.rollNumber = student.rollNumber;
+        this.name = student.name;
+        this.marks = student.marks;
     }
 
-    class Student {
-        int rollNumber;
-        String name;
-    }
 
 }
