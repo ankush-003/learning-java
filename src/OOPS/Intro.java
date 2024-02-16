@@ -27,6 +27,13 @@ public class Intro {
         Student rahulCopy = new Student(rahul);
         System.out.println(rahulCopy.rollNumber);
         System.out.println(rahulCopy.name);
+
+        Student one = new Student(91, "Ankush", 90.0f);
+        Student two = one;
+        System.out.println(one.rollNumber);
+        System.out.println(two.rollNumber);
+        two.rollNumber = 92;
+        System.out.println(one.rollNumber);
     }
 }
 
