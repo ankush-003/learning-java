@@ -76,3 +76,22 @@
 ## Innner Classes
 - A class created inside another class is called an inner class.
 - Inner classes can be static because they are associated with the class, not with the object.
+
+# OOPS Principles
+
+## Inheritance
+- Inheritance is a mechanism in which one object acquires all the properties and behaviors of a parent object.
+- The `extends` keyword is used to inherit the properties of a class.
+```java
+    class Superclass {
+        // code
+    }
+    class Subclass extends Superclass {
+        // code
+    }
+```
+- to initialize the parent class constructor from the child class constructor, we use `super()` keyword.
+- The `super()` keyword should be the first statement in the child class constructor
+- A reference variable of a parent class can refer to an object of a child class, but the reverse is not possible.
+- Attributes that can be accessed depends on the reference type and not on the object type.
+- The `instanceof` operator is used to test if an object is of a class type.
