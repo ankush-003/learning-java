@@ -4,6 +4,7 @@ public class Box {
     double l;
     double b;
     double h;
+    int type = 10;
 
     Box() {
         l = 0;
@@ -25,6 +26,7 @@ public class Box {
         l = ob.l;
         b = ob.b;
         h = ob.h;
+        this.type = ob.type;
     }
 
     public void information() {
