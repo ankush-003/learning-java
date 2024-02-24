@@ -139,6 +139,8 @@
 
 ## Polymorphism
 - Polymorphism is the ability of an object to take on many forms.
+
+> What can be accessed is defined by the reference variable type, and what is executed is defined by the object type.
 ## Types of Polymorphism
 ### Compile Time / Static Polymorphism
 - this type of polymorphism is achieved by function overloading or operator overloading (not in java).
@@ -220,4 +222,26 @@
   - `getClass()` method: returns the class of the object.
 - `instanceof` operator is used to test if an object is of a class type.
 - `getClass()` method is used to get the class of the object. (returns the class of the object in the form of a `Class` object stored in heap memory.) It has methods like `getName()`, `getSuperclass()`, `getInterfaces()`, etc. It cannot be Overridden (final method).
-- 
+
+## Abstract Classes
+- An abstract class is a class that is declared with the `abstract` keyword.
+- if a class has an abstract method, then the class must be declared as `abstract`.
+- the subclass of an abstract class must implement all the abstract methods of the parent class.
+- `abstract` classes cannot be instantiated (constructor of abstract class is called when an object of its subclass is created).
+- `final` and `abstract` keywords cannot be used together (as `final` class cannot be inherited and `abstract` class must be inherited).
+- `abstract` classes still can have non abstract methods.
+- `abstract` classes still don't solve multiple inheritance problem.
+
+## Interfaces
+- An interface is a reference type in Java.
+- All methods in an interface are `abstract` by default.
+- All variables in an interface are `public`, `static`, and `final` by default (as interfaces cannot have instance variables).
+- All methods in an interface are `public`, `abstract` by default.
+- The dynamic method dispatch is used to call the methods of the interface, due to which the interface is used to achieve multiple inheritance.
+- Interfaces should not be used in performance-critical applications as they slow down the application because they require extra indirection to find the corresponding method in the actual class.
+- Interfaces can be extended by other interfaces.
+- Annotations are also implemented using interfaces.
+- We can provide default implementation of methods in interfaces using `default` keyword. (since Java 8)
+- `static` methods in interfaces must have a body as they cannot be overridden, they must be called using the interface name.
+- Interfaces can also be nested inside a class or another interface, but the top level interfaces have to be `public` or `default`.
+> Overridden methods should have same or better accessibility than the overridden method.
