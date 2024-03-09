@@ -75,6 +75,8 @@ Runnable r2 = new Runnable() {
 - Timed Waiting: The thread is in the timed waiting state if it is waiting for another thread to perform a particular action for a specified waiting time.
 - Terminated: The thread is in the terminated state if the run() method is completed.
 
+## Multithreading & Memory
+![image](https://github.com/ankush-003/learning-java/assets/94037471/42248b21-463d-443c-b616-d711630ec09d)
 
 
 
